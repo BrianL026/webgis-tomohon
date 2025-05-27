@@ -11,4 +11,4 @@ chmod +x ./geoserver-${GEOSERVER_VERSION}/bin/*.sh
 # Setup Python HTTP server for serving static files
 echo 'alias serve="python3 -m http.server"' >> ~/.bashrc
 
-echo "Setup complete! GeoServer is ready to run."
+echo "Setup complete! GeoServer 2.27.1 is ready to run."
