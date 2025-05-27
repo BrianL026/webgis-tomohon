@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WebGIS Project Kelompok 1</title>
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Leaflet plugins -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-sidebar-v2/css/leaflet-sidebar.min.css">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="header">
+    <h1>WebGIS Peta Kerawanan Longsor Kota Tomohon</h1>
+  </div>
+  
+  <div id="sidebar" class="leaflet-sidebar collapsed">
+    <div class="leaflet-sidebar-tabs">
+      <ul role="tablist">
+        <li><a href="#home" role="tab"><i class="fas fa-bars"></i></a></li>
+        <li><a href="#info" role="tab"><i class="fas fa-info-circle"></i></a></li>
+        <li><a href="#settings" role="tab"><i class="fas fa-cog"></i></a></li>
+      </ul>
+    </div>
+    <div class="leaflet-sidebar-content">
+      <div class="leaflet-sidebar-pane" id="home">
+        <h2>Lapisan Peta</h2>
+        <div class="control-section">
+          <h3>Layer Control</h3>
+          <div id="layersControl"></div>
+        </div>
+        <div class="control-section">
+          <h3>Legend</h3>
+          <div id="legend" class="legend"></div>
+        </div>
+      </div>
+      <div class="leaflet-sidebar-pane" id="info">
+        <h2>Informasi</h2>
+        <p>WebGIS Peta Kerawanan Longsor Tomohon</p>
+        <p>Dibuat oleh Kelompok 1:</p>
+        <ul id="team-members">
+          <li>Abrian Oktavianus Lonteng</li>
+          <li>A.M. Ilham Akbar. HS</li>
+          <li>Meylani Moningkey</li>
+        </ul>
+      </div>
+      <div class="leaflet-sidebar-pane" id="settings">
+        <h2>Pengaturan</h2>
+        <div class="setting-item">
+          <h3>Pilihan Basemap</h3>
+          <div id="basemapControl"></div>
+        </div>
+        <div class="setting-item">
+          <label for="opacitySlider">Transparansi Layer:</label>
+          <input type="range" id="opacitySlider" min="0" max="1" step="0.1" value="1">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="map"></div>
+  
+  <div class="footer">
+    <p>&copy; 2025 WebGIS Project Kelompok 1</p>
+  </div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <!-- Leaflet Plugins -->
+  <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet-sidebar-v2/js/leaflet-sidebar.min.js"></script>
+  <!-- Main Script -->
+  <script src="js/main.js"></script>
+</body>
+</html>
